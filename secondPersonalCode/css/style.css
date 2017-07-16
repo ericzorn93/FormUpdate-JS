@@ -1,0 +1,49 @@
+body {
+    background-color: darkblue;
+    color: white;
+}
+
+.candidate {
+	font-family: sans-serif;
+}
+
+.dateClass {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.results {
+    font-family: cursive;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.test {
+    font-family: sans-serif;
+}
+
+.president {
+    margin-left: 40%;
+    display: none;
+}
+
+.presidentActive {
+    display: block;
+    margin-left: 40%;
+}
+
+.picTitle {
+    margin-left: 36%;
+    transition: easein;
+    font-family: sans-serif;
+    transition: display 0.2s ease;
+}
+
+.error {
+    color: red;
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+}
+

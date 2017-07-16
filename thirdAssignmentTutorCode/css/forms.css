@@ -1,0 +1,13 @@
+body {
+    background-color: deepskyblue;
+}
+
+#submitButton {
+    margin-left: 20px;
+}
+
+output {
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: 900;
+}

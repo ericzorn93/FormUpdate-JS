@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Eric Z.</title>
+    <!-- scripts and stylesheet can be external files -->
+    <script src="js/scripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body onload="javascript:newForm();">
+    <form>
+        <table border="1" cellspacing="2" width="300">
+
+            <tr>
+                <td>Party</td>
+                <td>Candidate</td>
+                <td>Votes</td>
+                <td>Percent</td>
+            </tr>
+            <tr>
+                <td><select><option value="D" id="starthere" selected>Dem</option><option value="R">Rep</option><option value="I">Ind</option</select></td>
+                <td><input type="text " id="f0" value="Mike"></td>
+                <td><input type="text" id="0" value=""></td>
+                <td><input type="text" id="p0" disabled></td>
+            </tr>
+            <tr>
+                <td><select><option value="D">Dem</option><option value="R" selected>Rep</option><option value="I">Ind</option</select></td>
+                <td><input type="text" id="f1" value="Eric"></td>
+                <td><input type="text" id="1" value=""></td>
+                <td><input type="text" id="p1" disabled></td>
+            </tr>
+            <tr>
+                <td><select><option value="D" >Dem</option><option value="R">Rep</option><option value="I" selected>Ind</option</select></td>
+                <td><input type="text" id="f2" value="John"></td>
+                <td><input type="text" id="2" value=""></td>
+                <td><input type="text" id="p2" disabled></td>
+            </tr>
+            <tr>
+                <td> </td>
+                <td><input type="text" id="ttl" value="Total" disabled></td>
+                <td><input type="text" id="ttlv" disabled></td>
+                <td><input type="text" id="ttlp" value="100%" disabled></td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <p id="theResults"></p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <font color="RED">
+                        <p id="ErrorMessage"></p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <p id="asof"></p>
+                </td>
+            </tr>
+        </table>
+        <input type="button" id="calcbtn" value="CALCULATE" onClick="javascript:dispatch();">
+        <input type="reset" value='RESET'>
+    </form>
+</body>
+
+</html>

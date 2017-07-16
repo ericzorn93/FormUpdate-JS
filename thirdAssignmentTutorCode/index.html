@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function countVotes()
+{
+	 
+	var a, b, c;
+	a = parseInt(document.getElementById("votes1").value,10);
+	b = parseInt(document.getElementById("votes2").value,10);
+	c = parseInt(document.getElementById("votes3").value,10);
+	
+	if(isNaN(a))
+	{
+		alert("Input not valid");
+	}
+	if(isNaN(b))
+	{
+      
+		alert("Input not valid");
+	}
+	if(isNaN(c))
+	{
+		alert("Input not valid");
+	}
+	
+//
+	
+	
+	
+	
+// Array of numbers
+	var array1 = [a,b,c];
+	var sum;
+	sum=sumNumbers(array1);
+	function sumNumbers(arrays)
+	{
+		var i;
+		var sumVotes=0;
+		for(i=0; i<arrays.length; i++)
+			sumVotes += Number(arrays[i]);// sumVotes = sumVotes + Number(arrays[i]);
+		return sumVotes;
+
+	}
+	
+	document.getElementById("results").innerHTML = sum; 
+
+  
+    //function getPercentage(arrays)
+  	//{
+    	//var i;
+        //var sum = sumNumbers(arrays);
+      	//var array3=[0,0,0];
+      	//for(i=0; i<arrays.length; i++)
+        //{
+          //			percent1 = Number(arrays[i])/sum;
+          	//	    percent1 = percent1 * 100;
+         // 			array3[i] = percent1;
+       // }
+   //   return array3;
+  	//}
+  
+    
+	var percent1, percent2, percent3;
+	percent1 = array1[0]/sum;
+	percent1 = percent1*100;
+	percent2 = array1[1]/sum;
+	percent2 = percent2*100;
+	percent3 = array1[2]/sum;
+	percent3 = percent3*100;
+  
+    //var array2 = [percent1, percent2, percent3];
+  	//array2 = getPercentage(array2);
+  //  document.getElementById("percentage1").innerHTML = array2[0].toFixed(1) + "%";
+  
+	document.getElementById("percentage1").innerHTML = percent1.toFixed(1) + "%";
+	document.getElementById("percentage2").innerHTML = percent2.toFixed(1) + "%";
+	document.getElementById("percentage3").innerHTML = percent3.toFixed(1) + "%";
+	
+	
+	var yyyy, mm, dd;
+	var today = new Date();
+	yyyy = today.getFullYear();
+	mm = today.getMonth();
+	dd = today.getDate();
+	if(mm < 10)
+	{
+		mm = "0" + mm;
+	}
+	if(dd < 10) 
+	{
+		dd = "0" + dd;
+	}
+	var dat = "" + mm + "/" + dd + "/" + yyyy;
+    var date2 = "" + yyyy + "-" + mm + "-" + dd;
+  
+
+	document.getElementById("date").innerHTML = dat;
+	
+	
+}
+</script>
+</head>
+<body>
+<table>
+	<p>Votes for candidates</p>
+	Votes for Candidate 1: <input id="votes1" type="number" required><br/>
+	Votes for Candidate 2: <input id="votes2" type="number" required><br/>
+	Votes for Candidate 3: <input id="votes3" type="number" required><br/>
+	<button type="button" onclick="countVotes()">Count</button>
+	<hr>
+
+	<p>Current Results</p>
+	<id> As of </id><id id="date"></id></br></br>
+	<id> Total Votes counted </id> <id id="results"></id></br></br>
+	<id> Pat Percentage </id> <id id="percentage1"></id></br></br>
+	<id> Robin Percentage </id> <id id="percentage2"></id></br></br>
+	<id> Alex Percentage </id> <id id="percentage3"></id></br>
+	
+	
+</table>
+</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
